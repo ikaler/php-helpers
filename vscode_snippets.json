@@ -1,0 +1,312 @@
+{
+    "eco" : {
+        "prefix" : "eco",
+        "body" : [
+            "echo $${1:var};"
+        ],
+        "description" : "'echo' statement"
+    },
+    "fore" : {
+        "prefix" : "fore",
+        "body" : [
+            "foreach ($${1:array} as $${2:item}) {",
+            "\t$0",
+            "}"
+        ],
+        "description" : "foreach(iterable_expr as $value) {...}"
+    },
+    "forek" : {
+        "prefix" : "forek",
+        "body" : [
+            "foreach ($${1:array} as $${2:key} => $${3:value}) {",
+            "\t$0",
+            "}"
+        ],
+        "description" : "foreach(iterable_expr as $key => $value) {...}"
+    },
+    "foreachend": {
+        "prefix": "foreachend",
+        "body": [
+            "foreach ($${1:variable} as $${2:key} => $${3:value}):",
+            "\t$0",
+            "endforeach;"
+        ],
+        "description": "foreach"
+    },
+    "forend": {
+        "prefix": "forend",
+        "body": [
+            "for ($${1:i}=0; $${1:i}<$${2}; $${1:i}++):",
+            "\t$0",
+            "endfor;"
+        ],
+        "description": "for"
+    },
+    "while": {
+        "prefix": "whileend",
+        "body": [
+            "while ($${1:variable} <= 10):",
+            "\t$0",
+            "endwhile;"
+        ],
+        "description": "while"
+    },
+    "dowhile": {
+        "prefix": "dowhile",
+        "body": [
+            "do {",
+            "\t$0",
+            "} while ($${1:variable} <= 10);"
+        ],
+        "description": "dowhile"
+    },
+    "prif" : {
+        "prefix" : "prif",
+        "body" : [
+            "private function ${1:name}($${2:arg}) {",
+            "\t$0",
+            "}"
+        ],
+        "description" : "private function."
+    },
+    "prisf" : {
+        "prefix" : "prisf",
+        "body" : [
+            "private static function ${1:name}($${2:arg}) {",
+            "\t$0",
+            "}"
+        ],
+        "description" : "private static function."
+    },
+    "prof" : {
+        "prefix" : "prof",
+        "body" : [
+            "protected function ${1:name}($${2:arg}) {",
+            "\t$0",
+            "}"
+        ],
+        "description" : "protected function."
+    },
+    "prosf" : {
+        "prefix" : "prosf",
+        "body" : [
+            "protected static function ${1:name}($${2:arg}) {",
+            "\t$0",
+            "}"
+        ],
+        "description" : "protected static function."
+    },
+    "pubf" : {
+        "prefix" : "pubf",
+        "body" : [
+            "public function ${1:name}($${2:arg}) {",
+            "\t$0",
+            "}"
+        ],
+        "description" : "public function."
+    },
+    "pubsf" : {
+        "prefix" : "pubsf",
+        "body" : [
+            "public static function ${1:name}($${2:arg}) {",
+            "\t$0",
+            "}"
+        ],
+        "description" : "public static function."
+    },
+    "thr" : {
+        "prefix" : "thr",
+        "body" : [
+            "throw new ${1:\\Exception}(\"${2:Error Processing Request}\");"
+        ],
+        "description" : "throw new"
+    },
+	"def": {
+		"prefix": "def",
+		"body": [
+			"define('${1:key}', '${2:value}');"
+		],
+		"description": "define"
+	},
+	"ifdef": {
+		"prefix": "ifdef",
+		"body": [
+            "!defined('${1:key}') ? define('${1:key}', '${2:value}') : null;"
+
+		],
+		"description": "if not defined"
+	},
+	"ifo": {
+		"prefix": "ifo",
+		"body": [
+			"if (${1:condition}) {",
+			"\t$2",
+			"}"
+		],
+		"description": "if"
+	},
+	"ifelse": {
+		"prefix": "ifelse",
+		"body": [
+            "if (${1:condition}) {",
+            "\t$2",
+			"} else {",
+			"\t$3",
+			"}"
+		],
+		"description": "ifelse"
+	},
+	"ifelseif": {
+		"prefix": "ifelseif",
+		"body": [
+            "if (${1:condition}) {",
+            "\t$3",
+			"} elseif(${2:condition}) {",
+			"\t$4",
+			"} else {",
+			"\t$5",
+			"}"
+		],
+		"description": "ifelseif"
+	},
+	"switch": {
+		"prefix": "switch",
+		"body": [
+			"switch ($${1:condition}) {",
+            "\tcase ${2:label}:",
+            "\t\t",
+			"\t\tbreak;",
+			"\tcase ${3:label}:",
+			"\t\t",
+			"\t\tbreak;",
+			"\tcase ${4:label}:",
+			"\t\t",
+			"\t\tbreak;",
+			"\tdefault:",
+			"\t\t",
+			"}"
+		],
+		"description": "switch"
+	},
+	"globals": {
+		"prefix": "$GL",
+		"body": [
+			"$$GLOBALS[\"${1:name}\"]"
+		],
+		"description": "globals"
+	},
+	"server": {
+		"prefix": "$S",
+		"body": [
+			"$$_SERVER[\"${1:name}\"]"
+		],
+		"description": "server"
+	},
+	"request": {
+		"prefix": "$R",
+		"body": [
+			"$$_REQUEST[\"${1:name}\"]"
+		],
+		"description": "request"
+	},
+	"post": {
+		"prefix": "$P",
+		"body": [
+			"$$_POST[\"${1:name}\"]"
+		],
+		"description": "post"
+	},
+	"get": {
+		"prefix": "$G",
+		"body": [
+			"$$_GET[\"${1:name}\"]"
+		],
+		"description": "get"
+	},
+	"files": {
+		"prefix": "$F",
+		"body": [
+			"$$_FILES[\"${1:name}\"]"
+		],
+		"description": "files"
+	},
+	"env": {
+		"prefix": "$E",
+		"body": [
+			"$$_ENV[\"${1:name}\"]"
+		],
+		"description": "env"
+	},
+	"cookie": {
+		"prefix": "$C",
+		"body": [
+			"$$_COOKIE[\"${1:name}\"]"
+		],
+		"description": "cookie"
+	},
+	"session": {
+		"prefix": "$SS",
+		"body": [
+			"$$_SESSION[\"${1:name}\"]"
+		],
+		"description": "session"
+	},
+	"date": {
+		"prefix": "date",
+		"body": [
+			"date(\"${1:format}\", ${2:timestamp})"
+		],
+		"description": "date"
+	},
+	"inc": {
+		"prefix": "inc",
+		"body": [
+			"include \"${1:filename}\";"
+		],
+		"description": "include"
+	},
+	"inco": {
+		"prefix": "inco",
+		"body": [
+			"include_once \"${1:filename}\";"
+		],
+		"description": "include"
+	},
+	"req": {
+		"prefix": "req",
+		"body": [
+			"require \"${1:filename}\";"
+		],
+		"description": "require"
+	},
+	"reqo": {
+		"prefix": "reqo",
+		"body": [
+			"require_once \"${1:filename}\";"
+		],
+		"description": "require"
+	},
+	"func": {
+		"prefix": "func",
+		"body": [
+			"function ${1:name}($${2:arg}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "function"
+	},
+	"class": {
+		"prefix": "cls",
+		"body": [
+            "class ${1:name} {",
+            "\t",
+            "\t// Constructor",
+            "\tpublic function __construct() {",
+            "\t\t// echo \"The class '\" . __CLASS__ . \"' was initiated!\";",
+            "\t\t$0",
+            "\t}",
+            "}"
+		],
+		"description": "namespace"
+	}
+}
