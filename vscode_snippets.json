@@ -307,6 +307,13 @@
             "\t}",
             "}"
 		],
+		"description": "class"
+	},
+	"namespace": {
+		"prefix": "ns",
+		"body": [
+            "namespace App\\\\${1:name};"
+		],
 		"description": "namespace"
 	}
 }
