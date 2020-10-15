@@ -1,7 +1,7 @@
 {
     "debug.openDebug": "openOnDebugBreak",
     "editor.cursorBlinking": "smooth",
-    "editor.cursorStyle": "block",
+    "editor.cursorStyle": "line",
     "editor.lineHeight": 20,
     "editor.rulers": [80],
     "editor.wordWrap": "on",
