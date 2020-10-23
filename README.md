@@ -2,8 +2,8 @@
 
 > **NOTE:** This repository contains php helper classes, functions and vscode settings and snippets.
 
-## Features
+## Includes
 
-* [Linked List](examples/linked_list.php)
+* [Linked List](src/LinkedList/LinkedList.php) -> ([example](examples/linked_list.php))
 
 
