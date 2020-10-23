@@ -2,8 +2,6 @@
 
 namespace App\LinkedList;
 
-use Exception;
-
 class LinkedList
 {
 
