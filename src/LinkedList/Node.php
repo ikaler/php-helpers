@@ -9,10 +9,10 @@ class Node
     private $next;
 
     // Constructor
-    public function __construct($data)
+    public function __construct()
     {
         // echo "The class '" . __CLASS__ . "' was initiated!";
-        $this->data = $data;
+        $this->data = "";
         $this->next = null;
     }
 

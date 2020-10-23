@@ -1,0 +1,15 @@
+{
+    "name": "inder/php-helpers",
+    "authors": [
+        {
+            "name": "Inderjeet Kaler",
+            "email": "inderjeet@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
