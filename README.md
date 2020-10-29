@@ -4,6 +4,8 @@
 
 ## Includes
 
-* [Linked List](src/LinkedList/LinkedList.php) -> ([example](examples/linked_list.php))
+* [Linked List](src/LinkedList/) -> ([example](examples/linked_list.php))
+
+* [Singleton Pattern](src/DesignPattern/Singleton/) -> ([example](examples/singleton.php))
 
 

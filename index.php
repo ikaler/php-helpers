@@ -12,5 +12,10 @@
         <h2><a href="./examples/linked_list.php">Linked List</a></h2>
         </li>
     </ul>
+    <ul>
+        <li>
+        <h2><a href="./examples/singleton.php">Singleton Pattern</a></h2>
+        </li>
+    </ul>
 </body>
 </html>
