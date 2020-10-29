@@ -1,3 +1,9 @@
+<?php
+$list = [
+    'linked_list' => 'Linked List',
+    'singleton' => 'Singleton Pattern'
+]
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +13,12 @@
 </head>
 <body style="font-family:sans-serif">
     <h1>PHP-Helpers</h1>
-    <ul>
-        <li>
-        <h2><a href="./examples/linked_list.php">Linked List</a></h2>
-        </li>
-    </ul>
-    <ul>
-        <li>
-        <h2><a href="./examples/singleton.php">Singleton Pattern</a></h2>
-        </li>
-    </ul>
+    <?php foreach ($list as $key => $value) { ?>
+        <ul>
+            <li>
+            <h2><a href="./examples/<?php echo $key; ?>.php"><?php echo $value; ?></a></h2>
+            </li>
+        </ul>
+    <?php } ?>
 </body>
 </html>
