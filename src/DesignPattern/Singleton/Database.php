@@ -26,6 +26,6 @@ class Database extends BaseSingleton {
 
     public static function connect() {
         $db = static::getInstance();
-         return $db->getConnection();
+        return $db->getConnection();
     }
 }

@@ -6,27 +6,27 @@ namespace App\DesignPattern\Singleton;
  */
 class Singleton {
 
-    private static $instance = null;
-    private int $count = 0;
+    private static Singleton $instance;
+    private int $count;
 
     private function __construct() {
-        $this->count++;
+        $this->count = 0;
      }
 
     private function __clone() { }
 
-    public static function getInstance() {
-        if (self::$instance == null) {
+    public static function getInstance(): Singleton {
+        if (empty(self::$instance)) {
             self::$instance = new Singleton();
         }
         return self::$instance;
     }
 
-    public function incrementCount($cnt) {
+    public function incrementCount(int $cnt) {
         $this->count += $cnt;
     }
 
-    public function getCount() {
+    public function getCount(): int {
         return $this->count;
     }
   }
